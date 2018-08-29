@@ -481,7 +481,7 @@ public struct BInt:
 
 	///	Returns BInt's value as an integer. Conversion only works when self has only one limb
 	/// that's within the range of the type "Int".
-	func asInt() -> Int?
+	public func asInt() -> Int?
 	{
 		if self.limbs.count != 1 { return nil }
 
@@ -2129,7 +2129,7 @@ public class BIntMath
 	///   - p: power
 	///   - m: modulus
 	/// - Returns: pow(b, p) % m
-	static func mod_exp(_ b: BInt, _ p: BInt, _ m: BInt) -> BInt {
+	public static func mod_exp(_ b: BInt, _ p: BInt, _ m: BInt) -> BInt {
 		precondition(m != 0, "modulus needs to be non-zero")
 		precondition(p >= 0, "exponent needs to be non-negative")
 		var base = b % m
