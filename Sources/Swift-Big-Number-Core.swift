@@ -226,7 +226,7 @@ public struct BInt:
 		{
 			return String(format: "%.1f kb", Double(bits) / 8_000.0)
 		}
-		if bits < 8_000_000_000
+		if bits < 8_000_000_000.0
 		{
 			return String(format: "%.1f mb", Double(bits) / 8_000_000.0)
 		}
@@ -2570,7 +2570,7 @@ public struct BDouble:
 		{
 			return String(format: "%.1f kb", Double(bits) / 8_000.0)
 		}
-		if bits < 8_000_000_000
+		if bits < 8_000_000_000.0
 		{
 			return String(format: "%.1f mb", Double(bits) / 8_000_000.0)
 		}
